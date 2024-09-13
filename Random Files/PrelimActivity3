@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class PrelimActivity3
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---Menu---\n1.Add New Employee\n2.Search an Employee\n3.Update an Employee\n4.Delete an Employee\n5.Display Employees\n6.Exit");
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+    }   
+
+}
