@@ -1,0 +1,43 @@
+body{
+    background-image:url(pic2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+    table{
+    font-family: monospace;
+    text-align: left;
+    }
+
+    td{
+        padding: 7px;
+    }
+
+    th{
+        padding: 15px;
+        padding-bottom:50px; 
+        font-size: 20px;
+    }
+    
+    .maindiv{
+        height: auto;
+        border: solid;
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 25px;
+        background-color: rgba(245, 194, 128, 0.336);
+        align-content: space-around;
+        text-overflow: clip;
+    }
+    p{
+        font-family: monospace;
+        font-size: 19px;
+    }
+    #how{
+        height: 50px;
+        max-width: 500px;
+        word-wrap:  break-word;
+    }
+    

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Music Survey</title>
+</head>
+<body>
+<!-- Basic Info of the respondents-->
+    <div class="maindiv">
+        <h1>Survey For Melophiles</h1>
+        <hr>
+        <div class="info">
+            <form id="survey">
+                <table>
+                    <br>
+                    <tr>
+                        <th>Name:</th>
+                        <td><input type="text" name="name" id="nam" class="upper" placeholder="Last Name, First Name" required></td>
+                    </tr>
+                    <tr>
+                        <th>Number:</th>
+                        <td><input type="tel" name="number" id="number" class="upper" placeholder="09XXXXXXXX" required></td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td><input type="email" name="email" id="email" placeholder="user@email.com" required></td>
+                    </tr>
+                </table>
+        </div>
+    
+    <!-- This here is the proper surver -->
+    
+        <div class="survey">
+                <table>
+                    <tr>
+                        <br><hr>
+                        <th>Which Streaming Services Do You Often use?</th>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="stream" id="spotify" value="Spotify">
+                                        <label for="spotify">Spotify</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="stream" id="youtube" value="Youtube">
+                                        <label for="youtube">Youtube</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="stream" id="apple" value="Apple Music">
+                                        <label for="apple">Apple Music</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="stream" id="others1" value="Others">
+                                        <label for="others1">Others</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr> 
+                        <th>Which Genres Do You Mostly Listen To Amongst The Choices?</th>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="pop" value="Pop" class="checkbox">
+                                        <label for="pop">Pop</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="rock" value="Rock" class="checkbox">
+                                        <label for="rock">Rock</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="jazz" value="Jazz" class="checkbox">
+                                        <label for="jazz">Jazz</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="rnb" value="RnB" class="checkbox">
+                                        <label for="rnb">RnB</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="hiphop" value="Hiphop" class="checkbox">
+                                        <label for="hiphop">Hiphop</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="indie" value="Indie" class="checkbox">
+                                        <label for="indie">Indie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="kpop" value="Kpop" class="checkbox">
+                                        <label for="kpop">Kpop</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="jpop" value="Jpop" class="checkbox">
+                                        <label for="jpop">Jpop</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="genre" id="others2" value="Others" class="checkbox">
+                                        <label for="others2">Others:</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <th>Have You Ever Bought A Music Album?</th>
+                        <tr>
+                            <td>
+                                <input type="radio" name="album" id="ayes" value="Yes">
+                                <label for="ayes">Yes</label>
+                                <input type="radio" name="album" id="ano" value="No">
+                                <label for="ano">No</label>
+                            </td>
+                        </tr>
+                        <th>Have you ever been in a gig or concert?</th>
+                        <tr>
+                            <td>
+                                <input type="radio" name="gig" id="cyes" value="Yes">
+                                <label for="cyes">Yes</label>
+                                <input type="radio" name="gig" id="cno" value="No">
+                                <label for="cno">No</label>
+                            </td>
+                        </tr>
+                        <th>Among The Choices, When Do You Most Listen To Music?</th>
+                        <tr>
+                            <td>
+                                <select name="when" id="when">
+                                    <option value="During Commute">During Commute</option>
+                                    <option value="While Studying">While Studying</option>
+                                    <option value="While Doing Chore">While Doing Chore</option>
+                                    <option value="Right Before Sleeping">Right Before Sleeping</option>
+                                    <option value="While Exercising">While Exercising</option>
+                                    <option value="While Doing Errands">While Doing Errands</option>
+                                    <option value="Anytime, Anywhere">Anytime, Anywhere</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <th>How did you start listening to music and what made you continue to listen to it?</th>
+                        <tr>
+                            <td>
+                                <textarea name="story" id="story" cols="80" rows="20"></textarea>
+                            </td>
+                        </tr>
+                        <td>
+                            <button type="button" id="submitBtn" onclick="submitData()">Submit</button> 
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

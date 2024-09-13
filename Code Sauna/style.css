@@ -1,0 +1,87 @@
+body{
+    background-image:url(pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+h1{
+    font-family: monospace;
+    }
+    
+table{
+    font-family: monospace;
+    text-align: left;
+    }
+td{
+    padding: 20px;
+}
+th{
+    padding: 0px;
+    font-size: 20px;
+    }
+
+.maindiv{
+    height: auto;
+    border: solid;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(202, 145, 240, 0.404);
+    }
+
+ul{
+        list-style-type: none;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        margin: 5px;
+    }
+
+input[type="text"]{
+    background-color:rgba(7, 2, 8, 0.575) ;
+    color: aliceblue;
+    width: 150%;
+    height:30px;
+    }
+
+input[type="email"]{
+    background-color:rgba(7, 2, 8, 0.575) ;
+    color: aliceblue;
+    width: 150%;
+    height: 30px;
+    }
+
+textarea{
+    background-color:rgba(7, 2, 8, 0.575) ;
+    color: aliceblue;
+    width:100%;
+    }
+
+label{
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+button{
+    margin-left: 38%;
+    height: 45px;
+    width: 150px;
+    }
+
+select{
+    height: 30px;
+    font-size: 17px;
+}
+input[type="radio"]{
+    margin: 10px;
+}
+label{
+    margin-right: 80px;
+}

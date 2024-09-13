@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+body{
+    margin: 30px 0px 0px 0px;
+    display: block;
+    background-color: #1F0F53;
+    background-image: url('/WEBSITE/assets/img/grad.jpg');
+    background-repeat:initial;
+    background-size: 4000px;
+}
+.navbar{
+    height: 150px;
+}
+img{
+    height: 100px;
+    float: left;
+    padding: 20px;
+    margin-right: 40px;
+    margin-left:30px ;
+}
+.navbar a{
+    color: wheat;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 28px 20px 28px;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 18px;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+.login{
+    background-color: purple;
+    color: #FFDB99;
+    border-radius: 10px;
+}
+a:hover{
+    color:white;
+    background-color: rgba(128, 0, 128, 0.281);
+    border-radius: 20px;
+    font-size: 35px;
+}
+a.login:hover{
+    background-color: #FFDB99;
+    color: purple ;
+    border-radius: 10px; 
+    font-size: 35px;
+    transition: 0.5s;
+}
+.container{
+    height: 600px;
+    position: relative;
+    color: #FFDB99;
+    font-family: 'Oswald', sans-serif;
+    margin: 30px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.intro{
+    height: 400px;
+    width:1446px;
+    margin-bottom: 100px;
+    background-color:rgba(14, 9, 21, 0.695);
+    background-image: url('/WEBSITE/assets/img/bts.jpg');
+    background-position: 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+.title{
+    color: #FFDB99;
+    height: 350px;
+    width: 550px;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 100px;
+    overflow: hidden;   
+}
+.trending{
+    height: 550px;
+    width: 1440px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.368);
+}
+.trending h3{
+    color: #FFDB99;
+    font-size: 30px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 673px;
+    left: 100px;
+    margin-bottom: 100px;
+}
+.item{
+    background-color: rgba(128, 128, 128, 0.403);
+    height: 420px;
+    width: 250px;
+    margin-top: 80px;
+    border: solid;
+    text-align: center;
+}
+.cover{
+    overflow: hidden;
+    width: 195px;
+    height: 195px;
+    border: solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 3px 5px rgba(14, 14, 14, 0.879);
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.cover img{
+    flex-shrink: 0;
+    height: 210px;
+    width: 210px;
+    object-fit: cover;
+    position:relative;
+    left: 10px;
+}
+.newest{
+    height: 550px;
+    width: 1440px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.368);
+}
+.newest h3{
+    color: #FFDB99;
+    font-size: 30px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 1340px;
+    left: 100px;
+    margin-bottom: 100px;
+}
+.item1{
+    background-color: rgba(128, 128, 128, 0.403);
+    height: 420px;
+    width: 250px;
+    margin-top: 50px;
+    border: solid;
+    text-align: center;
+}
+footer{
+    background-color:black;
+    margin-top: 20px;
+    height: 250px;
+    width: 1386px;
+    font-family: 'Oswald', sans-serif;
+    padding: 30px;
+}
+.emailf{
+    background-color:#1C084D;
+    color: #FFDB99;
+    float: right;
+    border-radius: 20px;
+    margin:10px;
+    padding: 30px;
+    padding-top: 0px;
+    height: 205px;
+    width: 500px;
+}
+.emailf h2{
+    color: #FF5DB2;
+    font-size: 30px;
+    margin: 0px;
+    margin-top: 10px;
+}
+.emailf p{
+    font-size: 20px;
+    padding: 0px;
+}
+.temp{
+    box-shadow: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 30px;
+}
+.fb{
+    font-size: 20px;
+    background-color: #FF5DB2;
+    color: white;
+    border: none;
+    box-shadow: none;
+    border-radius:20px ;
+}
+footer h1{
+    padding-left: 20px;
+    color: #FF5DB2;
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+footer p{
+    color: #FFDB99;
+}
+.fa-brands{
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 20px;
+    color: #FFDB99;
+    transition: 0.5s;
+}
+hr{
+    background-color: #FF5DB2;
+    height: 1px;
+    border: none;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFDB99;
+    margin: 20px;
+    cursor: pointer;
+}
