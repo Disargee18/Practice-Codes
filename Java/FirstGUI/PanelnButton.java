@@ -5,7 +5,11 @@ import javax.swing.*;
 
 public class PanelnButton extends JFrame implements ActionListener
 {
-    
+    JPanel panel1 = new JPanel();
+    JPanel panel2 = new JPanel();
+    JPanel panel3 = new JPanel();
+    JPanel panel4 = new JPanel();
+
     JButton button1 = new JButton();
     JButton button2 = new JButton();
     JButton button3 = new JButton();
@@ -14,19 +18,38 @@ public class PanelnButton extends JFrame implements ActionListener
 
     public PanelnButton()
     {   
-        JPanel panel1 = new JPanel();
+        
+        
+        
+
+        this.setTitle("Panel and Buttons");
+        // this.getContentPane().setBackground(Color.BLACK);
+        this.setBackground(Color.gray);
+        this.setLayout(null);
+        this.setSize(550, 550);
+        this.setVisible(true);
+        this.setResizable(true);
+        this.add(panel1);
+        this.add(panel2);
+        this.add(panel3);
+        this.add(panel4);
+        this.add(button1);
+        this.add(button2);
+        this.add(button3);
+        this.add(button4);
+    }
+
+    public void StartGame()
+    {
         panel1.setBackground(Color.CYAN);
         panel1.setBounds(0, 0, 250, 250);
 
-        JPanel panel2 = new JPanel();
         panel2.setBackground(Color.red);
         panel2.setBounds(0, 250, 250, 250);
 
-        JPanel panel3 = new JPanel();
         panel3.setBackground(Color.green);
         panel3.setBounds(250, 0, 250, 250);
 
-        JPanel panel4 = new JPanel();
         panel4.setBackground(Color.yellow);
         panel4.setBounds(250, 250, 250, 250);
         
@@ -45,23 +68,6 @@ public class PanelnButton extends JFrame implements ActionListener
         button4.setBounds(312,312,125,125);
         button4.setAlignmentX(CENTER_ALIGNMENT);
         button4.addActionListener(this);
-        
-
-        this.setTitle("Panel and Buttons");
-        // this.getContentPane().setBackground(Color.BLACK);
-        this.setBackground(Color.gray);
-        this.setLayout(null);
-        this.setSize(550, 550);
-        this.setVisible(true);
-        this.setResizable(true);
-        this.add(panel1);
-        this.add(panel2);
-        this.add(panel3);
-        this.add(panel4);
-        this.add(button1);
-        this.add(button2);
-        this.add(button3);
-        this.add(button4);
     }
 
     @Override
