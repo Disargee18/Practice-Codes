@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -15,20 +16,19 @@ public class PanelnButton extends JFrame implements ActionListener
     JButton button3 = new JButton();
     JButton button4 = new JButton();
 
+    JLabel title = new JLabel();
 
     public PanelnButton()
     {   
-        
-        
-        
-
+        title.setText("Welcome to Simon Game");
+        title.setBounds(120, -150, 500, 500);
+        title.setFont(new Font("Times New Roman",Font.PLAIN,30));
         this.setTitle("Panel and Buttons");
         // this.getContentPane().setBackground(Color.BLACK);
-        this.setBackground(Color.gray);
         this.setLayout(null);
         this.setSize(550, 550);
         this.setVisible(true);
-        this.setResizable(true);
+        this.setResizable(false);
         this.add(panel1);
         this.add(panel2);
         this.add(panel3);
@@ -37,6 +37,7 @@ public class PanelnButton extends JFrame implements ActionListener
         this.add(button2);
         this.add(button3);
         this.add(button4);
+        this.add(title);
     }
 
     public void StartGame()
