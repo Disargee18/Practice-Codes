@@ -15,14 +15,31 @@ public class PanelnButton extends JFrame implements ActionListener
     JButton button2 = new JButton();
     JButton button3 = new JButton();
     JButton button4 = new JButton();
+    JButton menuButton1 = new JButton();
+    JButton menuButton2 = new JButton();
 
     JLabel title = new JLabel();
 
     public PanelnButton()
     {   
+        //Menu Title
         title.setText("Welcome to Simon Game");
         title.setBounds(120, -150, 500, 500);
         title.setFont(new Font("Times New Roman",Font.PLAIN,30));
+
+        menuButton1.setBounds(110,200,125,50);
+        menuButton1.setAlignmentX(CENTER_ALIGNMENT);
+        menuButton1.addActionListener(this);
+        menuButton1.setText("Start");
+
+        menuButton2.setBounds(300, 200,125,50);
+        menuButton2.setAlignmentX(CENTER_ALIGNMENT);
+        menuButton2.addActionListener(this);
+        menuButton2.setText("Exit");
+
+
+
+        //Frames
         this.setTitle("Panel and Buttons");
         // this.getContentPane().setBackground(Color.BLACK);
         this.setLayout(null);
@@ -38,6 +55,8 @@ public class PanelnButton extends JFrame implements ActionListener
         this.add(button3);
         this.add(button4);
         this.add(title);
+        this.add(menuButton1);
+        this.add(menuButton2);
     }
 
     public void StartGame()
@@ -89,6 +108,19 @@ public class PanelnButton extends JFrame implements ActionListener
         else if(e.getSource()==button4)
         {
             System.out.println("Yellow");
+        }
+
+        if(e.getSource()==menuButton1)
+        {
+            StartGame();
+            menuButton1.setVisible(false);
+            menuButton1.invalidate();
+            menuButton2.setVisible(false);
+            menuButton2.invalidate();
+        }
+        else if(e.getSource()==menuButton2)
+        {
+            System.exit(0);
         }
     }
 }
