@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class PanelnButton extends JFrame implements ActionListener
@@ -17,8 +18,13 @@ public class PanelnButton extends JFrame implements ActionListener
     JButton button4 = new JButton();
     JButton menuButton1 = new JButton();
     JButton menuButton2 = new JButton();
+    JButton tempButton = new JButton();
 
     JLabel title = new JLabel();
+
+    ArrayList<String> answer = new ArrayList<String>();
+
+    double rand = Math.random();
 
     public PanelnButton()
     {   
@@ -36,6 +42,11 @@ public class PanelnButton extends JFrame implements ActionListener
         menuButton2.setAlignmentX(CENTER_ALIGNMENT);
         menuButton2.addActionListener(this);
         menuButton2.setText("Exit");
+
+        tempButton.setBounds(200,300,125,50);
+        tempButton.setAlignmentX(CENTER_ALIGNMENT);
+        tempButton.addActionListener(this);
+        tempButton.setText("*****");
 
 
 
@@ -57,6 +68,7 @@ public class PanelnButton extends JFrame implements ActionListener
         this.add(title);
         this.add(menuButton1);
         this.add(menuButton2);
+        this.add(tempButton);
     }
 
     public void StartGame()
@@ -93,22 +105,26 @@ public class PanelnButton extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource()==button1)
-        {
-            System.out.println("Blue");
-        }
-        else if(e.getSource()==button2)
-        {
-            System.out.println("Green");
-        }
-        else if(e.getSource()==button3)
-        {
-            System.out.println("Red");
-        }
-        else if(e.getSource()==button4)
-        {
-            System.out.println("Yellow");
-        }
+        // if(e.getSource()==button1)
+        // {
+        //     // System.out.println("Blue");
+        //     answer.add("Blue");
+        // }
+        // else if(e.getSource()==button2)
+        // {
+        //     // System.out.println("Green");
+        //     answer.add("Green");
+        // }
+        // else if(e.getSource()==button3)
+        // {
+        //     // System.out.println("Red");
+        //     answer.add("Red");
+        // }
+        // else if(e.getSource()==button4)
+        // {
+        //     // System.out.println("Yellow");
+        //     answer.add("Yellow");
+        // }
 
         if(e.getSource()==menuButton1)
         {
@@ -121,6 +137,24 @@ public class PanelnButton extends JFrame implements ActionListener
         else if(e.getSource()==menuButton2)
         {
             System.exit(0);
+        }
+
+        if(e.getSource()==tempButton)
+        {
+            int range = 4-1+1;
+            for(int i=0; i<1; i++)
+            {
+                int newRand = (int)(Math.random()*range)+1;
+                System.out.println(newRand);
+            }
+        }
+    }
+
+    public void displayArray()
+    {
+        for (int i = 0; i < answer.size(); i++) 
+        {
+            System.out.println(answer.get(i));
         }
     }
 }

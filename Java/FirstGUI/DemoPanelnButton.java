@@ -1,7 +1,15 @@
+
+import java.util.Scanner;
+
 public class DemoPanelnButton
 {
     public static void main(String[]args)
     {
-        new PanelnButton();
+        var c = new PanelnButton();
+        Scanner sc = new Scanner(System.in);
+        if(sc.nextLine().equals("yes"))
+        {
+            c.displayArray();
+        }
     }
 }
