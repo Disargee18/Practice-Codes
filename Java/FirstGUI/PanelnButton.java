@@ -23,8 +23,9 @@ public class PanelnButton extends JFrame implements ActionListener
     JLabel title = new JLabel();
 
     ArrayList<String> answer = new ArrayList<String>();
+    ArrayList<String> answerKey = new ArrayList<String>();
 
-    double rand = Math.random();
+    int rand = 0;
 
     public PanelnButton()
     {   
@@ -105,26 +106,26 @@ public class PanelnButton extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        // if(e.getSource()==button1)
-        // {
-        //     // System.out.println("Blue");
-        //     answer.add("Blue");
-        // }
-        // else if(e.getSource()==button2)
-        // {
-        //     // System.out.println("Green");
-        //     answer.add("Green");
-        // }
-        // else if(e.getSource()==button3)
-        // {
-        //     // System.out.println("Red");
-        //     answer.add("Red");
-        // }
-        // else if(e.getSource()==button4)
-        // {
-        //     // System.out.println("Yellow");
-        //     answer.add("Yellow");
-        // }
+        if(e.getSource()==button1)
+        {
+            // System.out.println("Blue");
+            answer.add("Blue");
+        }
+        else if(e.getSource()==button2)
+        {
+            // System.out.println("Green");
+            answer.add("Green");
+        }
+        else if(e.getSource()==button3)
+        {
+            // System.out.println("Red");
+            answer.add("Red");
+        }
+        else if(e.getSource()==button4)
+        {
+            // System.out.println("Yellow");
+            answer.add("Yellow");
+        }
 
         if(e.getSource()==menuButton1)
         {
@@ -144,8 +145,25 @@ public class PanelnButton extends JFrame implements ActionListener
             int range = 4-1+1;
             for(int i=0; i<1; i++)
             {
-                int newRand = (int)(Math.random()*range)+1;
-                System.out.println(newRand);
+                rand = (int)(Math.random()*range)+1;
+                System.out.println(rand);
+
+                if(rand==1)
+                {
+                    answerKey.add("Blue");
+                }
+                else if(rand==2)
+                {
+                    answerKey.add("Green");
+                }
+                else if(rand==3)
+                {
+                    answerKey.add("Red");
+                }
+                else if(rand==4)
+                {
+                    answerKey.add("Yellow");
+                }
             }
         }
     }
@@ -154,7 +172,12 @@ public class PanelnButton extends JFrame implements ActionListener
     {
         for (int i = 0; i < answer.size(); i++) 
         {
-            System.out.println(answer.get(i));
+            System.out.println(answerKey.get(i));
         }
+    }
+
+    public void getSequence()
+    {
+        
     }
 }
