@@ -1,17 +1,18 @@
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import java.util.Timer;
 import javax.swing.*;
 
 public class PanelnButton extends JFrame implements ActionListener
 {
+    //the panels
     JPanel panel1 = new JPanel();
     JPanel panel2 = new JPanel();
     JPanel panel3 = new JPanel();
     JPanel panel4 = new JPanel();
 
+    //the buttons
     JButton button1 = new JButton();
     JButton button2 = new JButton();
     JButton button3 = new JButton();
@@ -20,12 +21,15 @@ public class PanelnButton extends JFrame implements ActionListener
     JButton menuButton2 = new JButton();
     JButton tempButton = new JButton();
 
+    //the title
     JLabel title = new JLabel();
 
+    //the storage and counters
     ArrayList<String> answer = new ArrayList<String>();
     ArrayList<String> answerKey = new ArrayList<String>();
-
     int rand = 0;
+    int count=1;
+    int fadingTime = 5000;
 
     public PanelnButton()
     {   
@@ -34,16 +38,18 @@ public class PanelnButton extends JFrame implements ActionListener
         title.setBounds(120, -150, 500, 500);
         title.setFont(new Font("Times New Roman",Font.PLAIN,30));
 
+        //start button
         menuButton1.setBounds(110,200,125,50);
         menuButton1.setAlignmentX(CENTER_ALIGNMENT);
         menuButton1.addActionListener(this);
         menuButton1.setText("Start");
-
+        //exit button
         menuButton2.setBounds(300, 200,125,50);
         menuButton2.setAlignmentX(CENTER_ALIGNMENT);
         menuButton2.addActionListener(this);
         menuButton2.setText("Exit");
 
+        //the temp button for the randomizer *must be deleted in the final  
         tempButton.setBounds(200,300,125,50);
         tempButton.setAlignmentX(CENTER_ALIGNMENT);
         tempButton.addActionListener(this);
@@ -106,6 +112,7 @@ public class PanelnButton extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        //the action for the color buttons
         if(e.getSource()==button1)
         {
             // System.out.println("Blue");
@@ -127,6 +134,7 @@ public class PanelnButton extends JFrame implements ActionListener
             answer.add("Yellow");
         }
 
+        //the action for the start and exit button
         if(e.getSource()==menuButton1)
         {
             StartGame();
@@ -140,10 +148,13 @@ public class PanelnButton extends JFrame implements ActionListener
             System.exit(0);
         }
 
+
+        //the randomizer for the sequence
         if(e.getSource()==tempButton)
         {
             int range = 4-1+1;
-            for(int i=0; i<1; i++)
+            //count must be changed to adjust according to the level of the game
+            for(int i=0; i<count; i++)
             {
                 rand = (int)(Math.random()*range)+1;
                 System.out.println(rand);
@@ -170,14 +181,27 @@ public class PanelnButton extends JFrame implements ActionListener
 
     public void displayArray()
     {
-        for (int i = 0; i < answer.size(); i++) 
+        //Displays the randomized sequence
+        for (int i = 0; i < answerKey.size(); i++) 
         {
             System.out.println(answerKey.get(i));
         }
+
+        //Displays the "clicked" buttons 
+        for (int i = 0; i < answer.size(); i++) 
+        {
+            System.out.println(answer.get(i));
+        }
     }
 
-    public void getSequence()
+    public void FadeTimer()
     {
+        Timer timer = new Timer();
         
+    }
+    
+    public void Fader()
+    {
+
     }
 }
