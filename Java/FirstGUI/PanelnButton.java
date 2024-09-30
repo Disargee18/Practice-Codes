@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import java.util.Timer;
 import javax.swing.*;
 
 public class PanelnButton extends JFrame implements ActionListener
@@ -28,8 +27,7 @@ public class PanelnButton extends JFrame implements ActionListener
     ArrayList<String> answer = new ArrayList<String>();
     ArrayList<String> answerKey = new ArrayList<String>();
     int rand = 0;
-    int count=1;
-    int fadingTime = 5000;
+    int count=0;
 
     public PanelnButton()
     {   
@@ -75,10 +73,10 @@ public class PanelnButton extends JFrame implements ActionListener
         this.add(title);
         this.add(menuButton1);
         this.add(menuButton2);
-        this.add(tempButton);
+        // this.add(tempButton);
     }
 
-    public void StartGame()
+    public void StarGame()
     {
         panel1.setBackground(Color.CYAN);
         panel1.setBounds(0, 0, 250, 250);
@@ -107,6 +105,7 @@ public class PanelnButton extends JFrame implements ActionListener
         button4.setBounds(312,312,125,125);
         button4.setAlignmentX(CENTER_ALIGNMENT);
         button4.addActionListener(this);
+
     }
 
     @Override
@@ -115,93 +114,82 @@ public class PanelnButton extends JFrame implements ActionListener
         //the action for the color buttons
         if(e.getSource()==button1)
         {
-            // System.out.println("Blue");
+            System.out.println("Blue");
             answer.add("Blue");
         }
         else if(e.getSource()==button2)
         {
-            // System.out.println("Green");
+            System.out.println("Green");
             answer.add("Green");
+
         }
         else if(e.getSource()==button3)
         {
-            // System.out.println("Red");
+            System.out.println("Red");
             answer.add("Red");
+
         }
         else if(e.getSource()==button4)
         {
-            // System.out.println("Yellow");
+            System.out.println("Yellow");
             answer.add("Yellow");
         }
 
         //the action for the start and exit button
         if(e.getSource()==menuButton1)
         {
-            StartGame();
             menuButton1.setVisible(false);
             menuButton1.invalidate();
             menuButton2.setVisible(false);
             menuButton2.invalidate();
+            StarGame();
+            Sequence();
         }
         else if(e.getSource()==menuButton2)
         {
             System.exit(0);
         }
+    }
 
+    public void Sequence()
+    {
+        int rand = (int)(Math.random()*(4-1+1))+1;
 
-        //the randomizer for the sequence
-        if(e.getSource()==tempButton)
+        for(int i=0; i<=count; i++)
         {
-            int range = 4-1+1;
-            //count must be changed to adjust according to the level of the game
-            for(int i=0; i<count; i++)
+            if(rand==1)
             {
-                rand = (int)(Math.random()*range)+1;
-                System.out.println(rand);
+                answerKey.add("Blue");
+                System.out.println("blue");
+            }
+            else if(rand==2)
+            {
+                answerKey.add("Green");
+                System.out.println("green");
 
-                if(rand==1)
-                {
-                    answerKey.add("Blue");
-                }
-                else if(rand==2)
-                {
-                    answerKey.add("Green");
-                }
-                else if(rand==3)
-                {
-                    answerKey.add("Red");
-                }
-                else if(rand==4)
-                {
-                    answerKey.add("Yellow");
-                }
+            }
+            else if(rand==3)
+            {
+                answerKey.add("Red");
+                System.out.println("red");
+
+            }
+            else if(rand==4)
+            {
+                answerKey.add("Yellow");
+                System.out.println("yellow");
+            }
+
+            if(answerKey.get(i).equals(answer.get(i)))
+            {
+                System.out.println("Sakto");
+                count++;
             }
         }
     }
 
-    public void displayArray()
+    public void Display()
     {
-        //Displays the randomized sequence
-        for (int i = 0; i < answerKey.size(); i++) 
-        {
-            System.out.println(answerKey.get(i));
-        }
-
-        //Displays the "clicked" buttons 
-        for (int i = 0; i < answer.size(); i++) 
-        {
-            System.out.println(answer.get(i));
-        }
     }
 
-    public void FadeTimer()
-    {
-        Timer timer = new Timer();
-        
-    }
-    
-    public void Fader()
-    {
-
-    }
 }
